@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
+  m_Name: ModConfig
+  m_EditorClassIdentifier: 
+  id: BinaryPuzzle
+  title: Binary Puzzle
+  description: "01010100 01101000 01100101 01110010 01100101 00100000 01100001 \r\n01110010
+    01100101 00100000 01101111 01101110 01101100 01111001 \r\n00100000 00110001 00110000
+    00100000 01110100 01111001 01110000 \r\n01100101 01110011 00100000 01101111 01100110
+    00100000 01110000 \r\n01100101 01101111 01110000 01101100 01100101 00100000 01101001
+    \r\n01101110 00100000 01110100 01101000 01100101 00100000 01110111 \r\n01101111
+    01110010 01101100 01100100 00101110 00101110 00101110\n\nModule created by Timwi.\n\n[url=http://ktane.timwi.de/PDF/Binary%20Puzzle.pdf]Manual
+    PDF[/url]\n[url=http://ktane.timwi.de/HTML/Binary%20Puzzle.html]Manual HTML[/url]"
+  version: 1.0
+  outputFolder: build
+  previewImage: {fileID: 2800000, guid: bd5c1f4881f57d54481b44e4c8a7779a, type: 3}
