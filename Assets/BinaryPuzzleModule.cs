@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -213,5 +214,17 @@ public class BinaryPuzzleModule : MonoBehaviour
         return (m = Regex.Match(command, @"^\s*sol(?:ution|ve)?\s+([01]{36})\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant)).Success
             ? Enumerable.Range(0, 6).SelectMany(row => Enumerable.Range(0, 6).SelectMany(col => Enumerable.Repeat(Selectables[col + _size * row], (Array.IndexOf(_btnArr, m.Groups[1].Value[col + _size * row] == '1') + 3 - Array.IndexOf(_btnArr, _state[col + _size * row])) % 3))).ToArray()
             : null;
+    }
+
+    IEnumerator TwitchHandleForcedSolve()
+    {
+        for (var i = 0; i < _solution.Length; i++)
+        {
+            while (_state[i] != _solution[i])
+            {
+                Selectables[i].OnInteract();
+                yield return new WaitForSeconds(.1f);
+            }
+        }
     }
 }
